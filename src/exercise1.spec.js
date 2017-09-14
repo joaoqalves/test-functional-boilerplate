@@ -3,7 +3,7 @@ import { level3Function } from './exercise1';
 
 const numbers = [2, 3, 4, 5, 6]
 
-xdescribe('level3Function', () => {
+describe('level3Function', () => {
   it('should return a first, second and rest properties ', () => {
     let result = level3Function(numbers)
     expect(result).to.have.property('first')
@@ -23,14 +23,17 @@ xdescribe('level3Function', () => {
   })
 
   it('the first value should be ten times the double of the first item of the array', () => {
-    // TODO
+    let result = level3Function(numbers)
+    expect(result.first).to.equal(40);
   })
 
   it('the second value should be ten times the double of the second item of the array', () => {
-    // TODO
+    let result = level3Function(numbers)
+    expect(result.second).to.equal(60);
   })
 
   it('the rest values should be ten times the value of the remaining values after the 2 firsts', () => {
-    // TODO
+    let result = level3Function(numbers)
+    expect(result.rest).to.deep.equal([80, 100, 120])
   })
 })

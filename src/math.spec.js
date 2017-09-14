@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum, mult } from './math.js';
+import { sum, mult, sumAndMultiply, multiplyAndSum } from './math.js';
 
 describe('sum', () => {
   it('should add 1 + 1 to make two', () => {
@@ -24,13 +24,18 @@ describe('mult', () => {
     expect(result).to.equal(1);
   })
 
-  xit('should multiply 1 * 3 to make X', () => {
-    //expect(false).to.equal(true);
+  it('should multiply 1 * 3 to make X', () => {
+    let result = mult(1, 3)
+    expect(result).to.equal(3);
   })
 })
 
 describe('function composition', () => {
   it('should sum && multiply', () => {
-    // expect(sumAndMultiply x).to.equal(y)
+    expect(sumAndMultiply(1, 2, 3, 4)).to.equal(10)
+  })
+
+  it('should multiply && sum', () => {
+    expect(multiplyAndSum(1, 2, 3, 4)).to.equal(24)
   })
 })
